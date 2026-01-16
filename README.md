@@ -26,7 +26,36 @@
 
 <br/>
 
-## 🚀 Quick Start
+## � Preview
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <img src="./docs/screenshots/cart-page.png" width="280" alt="Cart Page"/>
+        <br/>
+        <b>🛒 Cart Page</b>
+        <br/>
+        <sub>3D 매장 지도 + 장바구니</sub>
+      </td>
+      <td align="center">
+        <img src="./docs/screenshots/search-page.png" width="280" alt="Search Page"/>
+        <br/>
+        <b>🔍 Search Page</b>
+        <br/>
+        <sub>실시간 검색 + 추천 상품</sub>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<br/>
+
+---
+
+<br/>
+
+## �🚀 Quick Start
 
 ```bash
 # 의존성 설치
