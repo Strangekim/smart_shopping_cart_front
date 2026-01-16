@@ -67,10 +67,9 @@ export default function IconButton({
         ${sizeStyles[size]}
         flex items-center justify-center
         rounded-lg
-        bg-white
+        bg-transparent
         text-gray-700
-        hover:bg-gray-50
-        hover:border-gray-400
+        hover:bg-gray-100
         transition-all duration-200
         cursor-pointer
         ${className}

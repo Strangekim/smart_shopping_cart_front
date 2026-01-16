@@ -153,7 +153,7 @@ export default function ProductGridCard({
                 {/* 수량 + 가격 */}
                 <div className="flex items-center justify-between pt-0.5">
                     <div className="text-xs text-gray-500">
-                        Qty: <span className="font-medium text-gray-700">{quantity}</span>
+                        Left Qty: <span className="font-medium text-gray-700">{quantity}</span>
                     </div>
                     <div className="text-base font-bold text-gray-800">
                         ${price.toFixed(2)}

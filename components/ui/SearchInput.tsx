@@ -30,6 +30,15 @@ export default function SearchInput({
         }
     };
 
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const newValue = e.target.value;
+        setValue(newValue);
+        // 실시간 검색: 타이핑할 때마다 onSearch 호출
+        if (onSearch) {
+            onSearch(newValue);
+        }
+    };
+
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
         if (e.key === 'Enter') {
             handleSearch();
@@ -42,7 +51,7 @@ export default function SearchInput({
                 type="search"
                 placeholder={placeholder}
                 value={value}
-                onChange={(e) => setValue(e.target.value)}
+                onChange={handleChange}
                 onKeyDown={handleKeyDown}
                 className="
           w-full

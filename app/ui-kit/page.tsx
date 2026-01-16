@@ -13,6 +13,7 @@ import ExpandableProductCard from '@/components/ui/product/ExpandableProductCard
 import ExpandableProductGridCard from '@/components/ui/product/ExpandableProductGridCard';
 import LocationIcon from '@/components/icons/LocationIcon';
 import CartFooter from '@/components/layout/CartFooter';
+import StoreMap from '@/components/map/StoreMap';
 
 export default function UIKitPage() {
     const [expandedCardId, setExpandedCardId] = useState<string | null>(null);
@@ -383,6 +384,17 @@ export default function UIKitPage() {
                         <CartFooter totalAmount={127.48} />
                     </div>
                 </div>
+            </section>
+
+            {/* Store Map (3D) */}
+            <section className="mb-8">
+                <h2 className="text-xl font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-200">
+                    Store Map (3D)
+                </h2>
+                <p className="text-sm text-gray-600 mb-4">
+                    Three.js based 3D store layout with product locations (drag to rotate, scroll to zoom)
+                </p>
+                <StoreMap />
             </section>
         </div>
     );
