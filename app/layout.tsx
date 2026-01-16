@@ -1,15 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Mulish } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const mulish = Mulish({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-mulish",
 });
 
 export const metadata: Metadata = {
@@ -24,10 +20,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${mulish.variable} font-sans antialiased`}>
+        {/* 웹: 배경색 */}
+        <div className="min-h-screen bg-gray-100">
+          {/* 모바일 컨테이너: 웹에서 중앙 정렬 + 최대 너비 제한 */}
+          <div className="max-w-[430px] mx-auto bg-white min-h-screen shadow-xl">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );
